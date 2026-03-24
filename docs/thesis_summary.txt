@@ -1,0 +1,33 @@
+
+
+Adversarial Patch for CLIP – Thesis Summary
+
+This project presents the design and implementation of a prototype system for protecting image privacy against automatic recognition by artificial intelligence models, specifically CLIP (Contrastive Language–Image Pretraining).
+
+The main objective of the work was to develop a tool capable of generating adversarial patches that can influence the classification results of AI models without significantly degrading the visual quality of the image from a human perspective.
+
+The system was implemented in Python using the PyTorch framework and executed in the Google Colab environment with GPU acceleration. The CLIP ViT-B/32 model was used as the target model for evaluation.
+
+The methodology is based on a three-stage pipeline:
+
+Stage 1 – Patch Optimization:
+The patch is initialized as a learnable tensor and optimized using gradient-based methods to maximize similarity with a chosen target text embedding (e.g., "a plane") in CLIP’s latent space.
+
+Stage 2 – Stabilization:
+The patch is applied to a synthetic (uniform) background to isolate its influence and improve stability using iterative optimization techniques.
+
+Stage 3 – Real Image Evaluation:
+The patch is applied to real images with random placement to test its effectiveness in realistic conditions without further training.
+
+The evaluation was conducted on a dataset of 21 images representing diverse objects and scenes. The results demonstrate that the generated adversarial patch is capable of significantly influencing CLIP’s predictions.
+
+Key results:
+- Approximately 85% success rate in changing the Top-1 prediction
+- Average confidence change (Δ confidence): +0.0469
+- Consistent semantic shift toward the target class
+
+The system includes an automated evaluation pipeline that logs predictions, confidence scores, and differences before and after applying the patch. Results are stored in CSV format and visualized using heatmaps and example comparisons.
+
+The proposed approach demonstrates that adversarial patches can be used as an active method of privacy protection against AI-based image recognition systems. While the method has limitations, such as sensitivity to compression and transformations, it provides a strong foundation for further research in defensive applications of adversarial machine learning.
+
+Future work may include improving robustness, reducing patch visibility, and extending the approach to multiple model architectures.

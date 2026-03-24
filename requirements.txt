@@ -1,0 +1,8 @@
+torch
+torchvision
+Pillow
+numpy
+tqdm
+matplotlib
+open_clip_torch
+git+https://github.com/openai/CLIP.git

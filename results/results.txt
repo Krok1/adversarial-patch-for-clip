@@ -1,0 +1,597 @@
+!python clip_patch_cli.py --labels plane_labels.txt --images photo*.jpg --output_dir out --steps1 400 --steps2 400
+
+
+Використання пристрою: cuda
+=== Stage1: швидке навчання ===
+/content/clip_patch_cli.py:92: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  prob_mean = float(probs[target_indices].mean())
+Stage1 | Step 1/400 | T(mean)=0.119 | Loss=-18.7812
+Stage1 | Step 20/400 | T(mean)=0.724 | Loss=-27.0312
+Досягнуто поріг 0.7. Зупинка Stage1.
+
+=== Stage2: донавчання ===
+Stage2 | Step 1/400 | T(mean)=0.658 | Loss=-26.9688
+Stage2 | Step 20/400 | T(mean)=0.827 | Loss=-27.9531
+Stage2 | Step 40/400 | T(mean)=0.904 | Loss=-28.7812
+Stage2 | Step 60/400 | T(mean)=0.947 | Loss=-29.7031
+Stage2 | Step 80/400 | T(mean)=0.969 | Loss=-30.4062
+Stage2 | Step 100/400 | T(mean)=0.981 | Loss=-31.1875
+Stage2 | Step 120/400 | T(mean)=0.988 | Loss=-31.4844
+Stage2 | Step 140/400 | T(mean)=0.990 | Loss=-31.6250
+Stage2 | Step 160/400 | T(mean)=0.990 | Loss=-31.6719
+Stage2 | Step 180/400 | T(mean)=0.991 | Loss=-31.6875
+Stage2 | Step 200/400 | T(mean)=0.991 | Loss=-31.7031
+Stage2 | Step 220/400 | T(mean)=0.991 | Loss=-31.7031
+Stage2 | Step 240/400 | T(mean)=0.990 | Loss=-31.7031
+Stage2 | Step 260/400 | T(mean)=0.991 | Loss=-31.7031
+Stage2 | Step 280/400 | T(mean)=0.991 | Loss=-31.7031
+Stage2 | Step 300/400 | T(mean)=0.991 | Loss=-31.7031
+Stage2 | Step 320/400 | T(mean)=0.991 | Loss=-31.7031
+Stage2 | Step 340/400 | T(mean)=0.991 | Loss=-31.7031
+Stage2 | Step 360/400 | T(mean)=0.991 | Loss=-31.7031
+Stage2 | Step 380/400 | T(mean)=0.991 | Loss=-31.7031
+Stage2 | Step 400/400 | T(mean)=0.991 | Loss=-31.7188
+
+=== Фінальний аналіз ===
+a plane             : 0.9907
+a bird              : 0.0039
+a helicopter        : 0.0045
+a cloud             : 0.0002
+a sky               : 0.0007
+Патч збережено: out/adv_patch.pt
+
+
+
+
+
+
+analyze_patch.py
+
+
+=== Аналіз з патчем у позиції: top-left ===
+
+=== Фінальний аналіз ===
+a plane             : 0.9907
+a bird              : 0.0039
+a helicopter        : 0.0045
+a cloud             : 0.0002
+a sky               : 0.0007
+
+=== Аналіз з патчем у позиції: center ===
+
+=== Фінальний аналіз ===
+a plane             : 0.9731
+a bird              : 0.0096
+a helicopter        : 0.0116
+a cloud             : 0.0010
+a sky               : 0.0047
+
+=== Аналіз з патчем у позиції: bottom-right ===
+
+=== Фінальний аналіз ===
+a plane             : 0.9609
+a bird              : 0.0234
+a helicopter        : 0.0120
+a cloud             : 0.0005
+a sky               : 0.0034
+
+
+
+
+
+
+COOL_analyze_patch
+
+Використання пристрою: cuda
+/usr/local/lib/python3.12/dist-packages/huggingface_hub/utils/_auth.py:94: UserWarning: 
+The secret `HF_TOKEN` does not exist in your Colab secrets.
+To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
+You will be able to reuse this secret in all of your notebooks.
+Please note that authentication is recommended but still optional to access public models or datasets.
+  warnings.warn(
+open_clip_model.safetensors: 100%
+ 605M/605M [00:06<00:00, 133MB/s]
+/usr/local/lib/python3.12/dist-packages/open_clip/factory.py:450: UserWarning: QuickGELU mismatch between final model config (quick_gelu=False) and pretrained tag 'laion400m_e32' (quick_gelu=True).
+  warnings.warn(
+
+========== Аналіз на моделі OpenAI CLIP ViT-B/32 ==========
+
+--- Патч у позиції: top-left ---
+
+Фото 1 (photo1.jpg):
+a plane             : 0.9639
+a bird              : 0.0197
+a helicopter        : 0.0149
+a cloud             : 0.0002
+a sky               : 0.0014
+
+Фото 2 (photo10.jpg):
+a plane             : 0.9985
+a bird              : 0.0004
+a helicopter        : 0.0007
+a cloud             : 0.0000
+a sky               : 0.0001
+
+Фото 3 (photo8.jpg):
+a plane             : 0.9932
+a bird              : 0.0029
+a helicopter        : 0.0033
+a cloud             : 0.0001
+a sky               : 0.0004
+
+Фото 4 (photo6.jpg):
+a plane             : 0.9941
+a bird              : 0.0042
+a helicopter        : 0.0013
+a cloud             : 0.0001
+a sky               : 0.0001
+
+Фото 5 (photo5.jpg):
+a plane             : 0.9873
+a bird              : 0.0011
+a helicopter        : 0.0083
+a cloud             : 0.0002
+a sky               : 0.0030
+
+Фото 6 (photo9.jpg):
+a plane             : 0.9858
+a bird              : 0.0084
+a helicopter        : 0.0046
+a cloud             : 0.0006
+a sky               : 0.0008
+
+Фото 7 (photo4.jpg):
+a plane             : 0.9966
+a bird              : 0.0005
+a helicopter        : 0.0019
+a cloud             : 0.0002
+a sky               : 0.0007
+
+Фото 8 (photo2.jpg):
+a plane             : 0.9912
+a bird              : 0.0016
+a helicopter        : 0.0066
+a cloud             : 0.0001
+a sky               : 0.0004
+
+Фото 9 (photo7.jpg):
+a plane             : 0.9966
+a bird              : 0.0019
+a helicopter        : 0.0007
+a cloud             : 0.0003
+a sky               : 0.0006
+
+Фото 10 (photo.jpg):
+a plane             : 0.9941
+a bird              : 0.0013
+a helicopter        : 0.0037
+a cloud             : 0.0001
+a sky               : 0.0006
+
+Фото 11 (photo3.jpg):
+a plane             : 0.9951
+a bird              : 0.0006
+a helicopter        : 0.0041
+a cloud             : 0.0001
+a sky               : 0.0001
+
+--- Патч у позиції: center ---
+
+Фото 1 (photo1.jpg):
+a plane             : 0.0646
+a bird              : 0.6836
+a helicopter        : 0.0970
+a cloud             : 0.0340
+a sky               : 0.1207
+
+Фото 2 (photo10.jpg):
+a plane             : 0.1475
+a bird              : 0.2712
+a helicopter        : 0.3271
+a cloud             : 0.0464
+a sky               : 0.2079
+
+Фото 3 (photo8.jpg):
+a plane             : 0.1912
+a bird              : 0.0630
+a helicopter        : 0.2871
+a cloud             : 0.1124
+a sky               : 0.3462
+
+Фото 4 (photo6.jpg):
+a plane             : 0.0941
+a bird              : 0.5854
+a helicopter        : 0.1066
+a cloud             : 0.1392
+a sky               : 0.0745
+
+Фото 5 (photo5.jpg):
+a plane             : 0.0757
+a bird              : 0.0845
+a helicopter        : 0.2334
+a cloud             : 0.0886
+a sky               : 0.5176
+
+Фото 6 (photo9.jpg):
+a plane             : 0.2219
+a bird              : 0.1755
+a helicopter        : 0.0374
+a cloud             : 0.1169
+a sky               : 0.4482
+
+Фото 7 (photo4.jpg):
+a plane             : 0.0523
+a bird              : 0.0532
+a helicopter        : 0.0837
+a cloud             : 0.3992
+a sky               : 0.4119
+
+Фото 8 (photo2.jpg):
+a plane             : 0.0501
+a bird              : 0.0826
+a helicopter        : 0.3530
+a cloud             : 0.0950
+a sky               : 0.4192
+
+Фото 9 (photo7.jpg):
+a plane             : 0.0986
+a bird              : 0.1527
+a helicopter        : 0.0562
+a cloud             : 0.2222
+a sky               : 0.4705
+
+Фото 10 (photo.jpg):
+a plane             : 0.1757
+a bird              : 0.1188
+a helicopter        : 0.3081
+a cloud             : 0.0843
+a sky               : 0.3130
+
+Фото 11 (photo3.jpg):
+a plane             : 0.2418
+a bird              : 0.0574
+a helicopter        : 0.4517
+a cloud             : 0.1255
+a sky               : 0.1235
+
+--- Патч у позиції: bottom-right ---
+
+Фото 1 (photo1.jpg):
+a plane             : 0.3984
+a bird              : 0.5039
+a helicopter        : 0.0461
+a cloud             : 0.0039
+a sky               : 0.0476
+
+Фото 2 (photo10.jpg):
+a plane             : 0.9800
+a bird              : 0.0085
+a helicopter        : 0.0093
+a cloud             : 0.0006
+a sky               : 0.0016
+
+Фото 3 (photo8.jpg):
+a plane             : 0.6782
+a bird              : 0.0715
+a helicopter        : 0.1561
+a cloud             : 0.0215
+a sky               : 0.0726
+
+Фото 4 (photo6.jpg):
+a plane             : 0.9185
+a bird              : 0.0487
+a helicopter        : 0.0257
+a cloud             : 0.0039
+a sky               : 0.0031
+
+Фото 5 (photo5.jpg):
+a plane             : 0.8032
+a bird              : 0.0104
+a helicopter        : 0.0702
+a cloud             : 0.0089
+a sky               : 0.1071
+
+Фото 6 (photo9.jpg):
+a plane             : 0.8877
+a bird              : 0.0501
+a helicopter        : 0.0328
+a cloud             : 0.0079
+a sky               : 0.0215
+
+Фото 7 (photo4.jpg):
+a plane             : 0.7822
+a bird              : 0.0289
+a helicopter        : 0.0508
+a cloud             : 0.0434
+a sky               : 0.0948
+
+Фото 8 (photo2.jpg):
+a plane             : 0.5361
+a bird              : 0.0991
+a helicopter        : 0.1635
+a cloud             : 0.0454
+a sky               : 0.1560
+
+Фото 9 (photo7.jpg):
+a plane             : 0.9199
+a bird              : 0.0357
+a helicopter        : 0.0090
+a cloud             : 0.0135
+a sky               : 0.0216
+
+Фото 10 (photo.jpg):
+a plane             : 0.8765
+a bird              : 0.0286
+a helicopter        : 0.0552
+a cloud             : 0.0117
+a sky               : 0.0277
+
+Фото 11 (photo3.jpg):
+a plane             : 0.9014
+a bird              : 0.0137
+a helicopter        : 0.0764
+a cloud             : 0.0035
+a sky               : 0.0051
+
+========== Аналіз на моделі OpenCLIP Laion ViT-B-32 ==========
+
+--- Патч у позиції: top-left ---
+
+Фото 1 (photo1.jpg):
+a plane             : 0.0181
+a bird              : 0.3673
+a helicopter        : 0.0102
+a cloud             : 0.0846
+a sky               : 0.5199
+
+Фото 2 (photo10.jpg):
+a plane             : 0.0011
+a bird              : 0.1879
+a helicopter        : 0.0010
+a cloud             : 0.7054
+a sky               : 0.1045
+
+Фото 3 (photo8.jpg):
+a plane             : 0.0121
+a bird              : 0.0247
+a helicopter        : 0.1351
+a cloud             : 0.3713
+a sky               : 0.4568
+
+Фото 4 (photo6.jpg):
+a plane             : 0.0015
+a bird              : 0.7404
+a helicopter        : 0.0008
+a cloud             : 0.1926
+a sky               : 0.0646
+
+Фото 5 (photo5.jpg):
+a plane             : 0.0017
+a bird              : 0.0034
+a helicopter        : 0.0068
+a cloud             : 0.0181
+a sky               : 0.9698
+
+Фото 6 (photo9.jpg):
+a plane             : 0.0002
+a bird              : 0.0548
+a helicopter        : 0.0001
+a cloud             : 0.0486
+a sky               : 0.8964
+
+Фото 7 (photo4.jpg):
+a plane             : 0.0001
+a bird              : 0.0031
+a helicopter        : 0.0005
+a cloud             : 0.0703
+a sky               : 0.9260
+
+Фото 8 (photo2.jpg):
+a plane             : 0.0023
+a bird              : 0.0109
+a helicopter        : 0.0115
+a cloud             : 0.5583
+a sky               : 0.4170
+
+Фото 9 (photo7.jpg):
+a plane             : 0.0000
+a bird              : 0.0131
+a helicopter        : 0.0001
+a cloud             : 0.2938
+a sky               : 0.6929
+
+Фото 10 (photo.jpg):
+a plane             : 0.0086
+a bird              : 0.0033
+a helicopter        : 0.0057
+a cloud             : 0.8116
+a sky               : 0.1708
+
+Фото 11 (photo3.jpg):
+a plane             : 0.0233
+a bird              : 0.0536
+a helicopter        : 0.7603
+a cloud             : 0.1009
+a sky               : 0.0620
+
+--- Патч у позиції: center ---
+
+Фото 1 (photo1.jpg):
+a plane             : 0.0096
+a bird              : 0.8815
+a helicopter        : 0.0063
+a cloud             : 0.0365
+a sky               : 0.0661
+
+Фото 2 (photo10.jpg):
+a plane             : 0.0012
+a bird              : 0.0934
+a helicopter        : 0.0003
+a cloud             : 0.5438
+a sky               : 0.3613
+
+Фото 3 (photo8.jpg):
+a plane             : 0.0053
+a bird              : 0.0427
+a helicopter        : 0.0187
+a cloud             : 0.2244
+a sky               : 0.7089
+
+Фото 4 (photo6.jpg):
+a plane             : 0.0003
+a bird              : 0.3914
+a helicopter        : 0.0001
+a cloud             : 0.0990
+a sky               : 0.5091
+
+Фото 5 (photo5.jpg):
+a plane             : 0.0028
+a bird              : 0.0029
+a helicopter        : 0.0019
+a cloud             : 0.0233
+a sky               : 0.9691
+
+Фото 6 (photo9.jpg):
+a plane             : 0.0004
+a bird              : 0.0793
+a helicopter        : 0.0000
+a cloud             : 0.1309
+a sky               : 0.7894
+
+Фото 7 (photo4.jpg):
+a plane             : 0.0002
+a bird              : 0.0053
+a helicopter        : 0.0004
+a cloud             : 0.0854
+a sky               : 0.9087
+
+Фото 8 (photo2.jpg):
+a plane             : 0.0021
+a bird              : 0.0120
+a helicopter        : 0.0044
+a cloud             : 0.4474
+a sky               : 0.5341
+
+Фото 9 (photo7.jpg):
+a plane             : 0.0001
+a bird              : 0.0136
+a helicopter        : 0.0001
+a cloud             : 0.5052
+a sky               : 0.4810
+
+Фото 10 (photo.jpg):
+a plane             : 0.0132
+a bird              : 0.0142
+a helicopter        : 0.0022
+a cloud             : 0.8052
+a sky               : 0.1653
+
+Фото 11 (photo3.jpg):
+a plane             : 0.0424
+a bird              : 0.1392
+a helicopter        : 0.1849
+a cloud             : 0.3947
+a sky               : 0.2388
+
+--- Патч у позиції: bottom-right ---
+
+Фото 1 (photo1.jpg):
+a plane             : 0.0294
+a bird              : 0.4460
+a helicopter        : 0.0163
+a cloud             : 0.0411
+a sky               : 0.4672
+
+Фото 2 (photo10.jpg):
+a plane             : 0.0018
+a bird              : 0.3105
+a helicopter        : 0.0009
+a cloud             : 0.5217
+a sky               : 0.1650
+
+Фото 3 (photo8.jpg):
+a plane             : 0.0016
+a bird              : 0.0077
+a helicopter        : 0.0054
+a cloud             : 0.5429
+a sky               : 0.4424
+
+Фото 4 (photo6.jpg):
+a plane             : 0.0007
+a bird              : 0.8373
+a helicopter        : 0.0012
+a cloud             : 0.1031
+a sky               : 0.0577
+
+Фото 5 (photo5.jpg):
+a plane             : 0.0015
+a bird              : 0.0018
+a helicopter        : 0.0026
+a cloud             : 0.0191
+a sky               : 0.9750
+
+Фото 6 (photo9.jpg):
+a plane             : 0.0002
+a bird              : 0.0532
+a helicopter        : 0.0001
+a cloud             : 0.0298
+a sky               : 0.9168
+
+Фото 7 (photo4.jpg):
+a plane             : 0.0002
+a bird              : 0.0078
+a helicopter        : 0.0005
+a cloud             : 0.1624
+a sky               : 0.8292
+
+Фото 8 (photo2.jpg):
+a plane             : 0.0032
+a bird              : 0.0133
+a helicopter        : 0.0021
+a cloud             : 0.4654
+a sky               : 0.5160
+
+Фото 9 (photo7.jpg):
+a plane             : 0.0000
+a bird              : 0.0056
+a helicopter        : 0.0000
+a cloud             : 0.3744
+a sky               : 0.6200
+
+Фото 10 (photo.jpg):
+a plane             : 0.0175
+a bird              : 0.0055
+a helicopter        : 0.0024
+a cloud             : 0.6627
+a sky               : 0.3119
+
+Фото 11 (photo3.jpg):
+a plane             : 0.0456
+a bird              : 0.0866
+a helicopter        : 0.6135
+a cloud             : 0.1303
+a sky               : 0.1240
+
+
+
+
+Stage3.py
+
+Використання пристрою: cuda
+100%|███████████████████████████████████████| 335M/335M [00:12<00:00, 27.3MiB/s]
+Початковий патч завантажено з Stage2: torch.Size([3, 64, 64])
+Фото для тренування: ['patch_stage1_new11111.png', 'photo.jpg', 'photo1.jpg', 'photo10.jpg', 'photo2.jpg', 'photo3.jpg', 'photo4.jpg', 'photo5.jpg', 'photo6.jpg', 'photo7.jpg']
+[Крок 0/200] Loss = -0.4019
+[Крок 20/200] Loss = -0.4014
+[Крок 40/200] Loss = -0.4019
+[Крок 60/200] Loss = -0.4021
+[Крок 80/200] Loss = -0.4028
+[Крок 100/200] Loss = -0.4033
+[Крок 120/200] Loss = -0.4048
+[Крок 140/200] Loss = -0.4058
+[Крок 160/200] Loss = -0.4087
+[Крок 180/200] Loss = -0.4116
+[Крок 199/200] Loss = -0.4155
+✅ Патч збережено як out/final_patch_stage3.pt
+✅ PNG версію збережено як out/final_patch_stage3.png

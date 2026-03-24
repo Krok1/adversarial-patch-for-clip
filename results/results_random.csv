@@ -1,0 +1,211 @@
+Image,Type,Label,Probability,Patch_Position
+photo.jpg,Original,a bridge,0.2661,—
+photo.jpg,Original,a bridge,0.2661,—
+photo.jpg,Original,an arch,0.2333,—
+photo.jpg,Original,a bay,0.2279,—
+photo.jpg,Original,a tower,0.2274,—
+photo.jpg,Patched,a plane,0.3210,"(53, 37)"
+photo.jpg,Patched,an airplane,0.3127,"(53, 37)"
+photo.jpg,Patched,a bridge,0.2522,"(53, 37)"
+photo.jpg,Patched,a bridge,0.2522,"(53, 37)"
+photo.jpg,Patched,a crane,0.2502,"(53, 37)"
+photo1.jpg,Original,a car,0.2429,—
+photo1.jpg,Original,a wagon,0.2227,—
+photo1.jpg,Original,a chariot,0.2036,—
+photo1.jpg,Original,a basket,0.2024,—
+photo1.jpg,Original,a beetle,0.2004,—
+photo1.jpg,Patched,a plane,0.2820,"(72, 121)"
+photo1.jpg,Patched,an airplane,0.2649,"(72, 121)"
+photo1.jpg,Patched,a car,0.2642,"(72, 121)"
+photo1.jpg,Patched,a limousine,0.2462,"(72, 121)"
+photo1.jpg,Patched,a plate,0.2347,"(72, 121)"
+photo10.jpg,Original,a bottle,0.2966,—
+photo10.jpg,Original,a glass,0.2629,—
+photo10.jpg,Original,a flashlight,0.2466,—
+photo10.jpg,Original,a shelf,0.2455,—
+photo10.jpg,Original,a vase,0.2434,—
+photo10.jpg,Patched,a bottle,0.2935,"(8, 2)"
+photo10.jpg,Patched,a plane,0.2622,"(8, 2)"
+photo10.jpg,Patched,a glass,0.2585,"(8, 2)"
+photo10.jpg,Patched,a vase,0.2522,"(8, 2)"
+photo10.jpg,Patched,a piano,0.2474,"(8, 2)"
+photo11.jpg,Original,a lantern,0.2361,—
+photo11.jpg,Original,a lantern,0.2361,—
+photo11.jpg,Original,a flashlight,0.2324,—
+photo11.jpg,Original,a lamp,0.2317,—
+photo11.jpg,Original,a lamp,0.2317,—
+photo11.jpg,Patched,a plane,0.3162,"(152, 82)"
+photo11.jpg,Patched,an airplane,0.3000,"(152, 82)"
+photo11.jpg,Patched,a lamp,0.2573,"(152, 82)"
+photo11.jpg,Patched,a lamp,0.2573,"(152, 82)"
+photo11.jpg,Patched,a lantern,0.2573,"(152, 82)"
+photo12.jpg,Original,a banana,0.3069,—
+photo12.jpg,Original,a banana,0.3069,—
+photo12.jpg,Original,a mango,0.2751,—
+photo12.jpg,Original,a mango,0.2751,—
+photo12.jpg,Original,a starfruit,0.2671,—
+photo12.jpg,Patched,a plane,0.3223,"(135, 20)"
+photo12.jpg,Patched,an airplane,0.3101,"(135, 20)"
+photo12.jpg,Patched,a banana,0.2854,"(135, 20)"
+photo12.jpg,Patched,a banana,0.2854,"(135, 20)"
+photo12.jpg,Patched,a tangerine,0.2678,"(135, 20)"
+photo13.jpg,Original,a volcano,0.3057,—
+photo13.jpg,Original,a volcano,0.3057,—
+photo13.jpg,Original,a mountain peak,0.2539,—
+photo13.jpg,Original,a mountain peak,0.2539,—
+photo13.jpg,Original,a geyser,0.2488,—
+photo13.jpg,Patched,a volcano,0.3042,"(31, 70)"
+photo13.jpg,Patched,a volcano,0.3042,"(31, 70)"
+photo13.jpg,Patched,a plane,0.2676,"(31, 70)"
+photo13.jpg,Patched,a mountain peak,0.2578,"(31, 70)"
+photo13.jpg,Patched,a mountain peak,0.2578,"(31, 70)"
+photo14.jpg,Original,a rose,0.2815,—
+photo14.jpg,Original,a rose,0.2815,—
+photo14.jpg,Original,a vase,0.2800,—
+photo14.jpg,Original,a glass,0.2546,—
+photo14.jpg,Original,a peony,0.2534,—
+photo14.jpg,Patched,a vase,0.2727,"(73, 96)"
+photo14.jpg,Patched,a rose,0.2688,"(73, 96)"
+photo14.jpg,Patched,a rose,0.2688,"(73, 96)"
+photo14.jpg,Patched,a piano,0.2595,"(73, 96)"
+photo14.jpg,Patched,a piano,0.2595,"(73, 96)"
+photo15.jpg,Original,a mug,0.2455,—
+photo15.jpg,Original,a teacup,0.2329,—
+photo15.jpg,Original,a teacup,0.2329,—
+photo15.jpg,Original,a kettle,0.2262,—
+photo15.jpg,Original,a tray,0.2256,—
+photo15.jpg,Patched,a plane,0.2881,"(123, 82)"
+photo15.jpg,Patched,an airplane,0.2832,"(123, 82)"
+photo15.jpg,Patched,a mug,0.2522,"(123, 82)"
+photo15.jpg,Patched,a plateau,0.2477,"(123, 82)"
+photo15.jpg,Patched,a can,0.2408,"(123, 82)"
+photo16.jpg,Original,a magnet,0.2595,—
+photo16.jpg,Original,a box,0.2444,—
+photo16.jpg,Original,a basketball,0.2372,—
+photo16.jpg,Original,a ladder,0.2363,—
+photo16.jpg,Original,a tie,0.2363,—
+photo16.jpg,Patched,a plane,0.3232,"(116, 82)"
+photo16.jpg,Patched,an airplane,0.3096,"(116, 82)"
+photo16.jpg,Patched,a plateau,0.2644,"(116, 82)"
+photo16.jpg,Patched,a map,0.2537,"(116, 82)"
+photo16.jpg,Patched,a delta,0.2467,"(116, 82)"
+photo17.jpg,Original,a cactus,0.2866,—
+photo17.jpg,Original,a succulent,0.2671,—
+photo17.jpg,Original,a aloe vera,0.2595,—
+photo17.jpg,Original,a pot,0.2581,—
+photo17.jpg,Original,a venus flytrap,0.2510,—
+photo17.jpg,Patched,a plane,0.3079,"(147, 61)"
+photo17.jpg,Patched,an airplane,0.2988,"(147, 61)"
+photo17.jpg,Patched,a succulent,0.2781,"(147, 61)"
+photo17.jpg,Patched,a venus flytrap,0.2708,"(147, 61)"
+photo17.jpg,Patched,a cactus,0.2695,"(147, 61)"
+photo18.jpg,Original,a lime,0.2637,—
+photo18.jpg,Original,a starfruit,0.2576,—
+photo18.jpg,Original,a mango,0.2532,—
+photo18.jpg,Original,a mango,0.2532,—
+photo18.jpg,Original,a taco,0.2520,—
+photo18.jpg,Patched,a plane,0.2996,"(2, 57)"
+photo18.jpg,Patched,an airplane,0.2925,"(2, 57)"
+photo18.jpg,Patched,a lime,0.2793,"(2, 57)"
+photo18.jpg,Patched,a tangerine,0.2595,"(2, 57)"
+photo18.jpg,Patched,a slide,0.2549,"(2, 57)"
+photo19.jpg,Original,a peninsula,0.2561,—
+photo19.jpg,Original,an island,0.2517,—
+photo19.jpg,Original,a cliff,0.2462,—
+photo19.jpg,Original,a fjord,0.2404,—
+photo19.jpg,Original,a lagoon,0.2323,—
+photo19.jpg,Patched,a plane,0.2769,"(124, 24)"
+photo19.jpg,Patched,an airplane,0.2646,"(124, 24)"
+photo19.jpg,Patched,a parachute,0.2537,"(124, 24)"
+photo19.jpg,Patched,a drone,0.2456,"(124, 24)"
+photo19.jpg,Patched,an island,0.2358,"(124, 24)"
+photo2.jpg,Original,a bungalow,0.2355,—
+photo2.jpg,Original,a villa,0.2216,—
+photo2.jpg,Original,a chalet,0.2198,—
+photo2.jpg,Original,a lawn,0.2185,—
+photo2.jpg,Original,a cottage,0.2161,—
+photo2.jpg,Patched,a lawn,0.2529,"(70, 161)"
+photo2.jpg,Patched,a bungalow,0.2390,"(70, 161)"
+photo2.jpg,Patched,a cottage,0.2327,"(70, 161)"
+photo2.jpg,Patched,a mansion,0.2300,"(70, 161)"
+photo2.jpg,Patched,a villa,0.2278,"(70, 161)"
+photo20.jpg,Original,a whistle,0.2290,—
+photo20.jpg,Original,a banana,0.2278,—
+photo20.jpg,Original,a banana,0.2278,—
+photo20.jpg,Original,a swing,0.2212,—
+photo20.jpg,Original,a bell,0.2172,—
+photo20.jpg,Patched,a plane,0.3066,"(1, 71)"
+photo20.jpg,Patched,an airplane,0.3005,"(1, 71)"
+photo20.jpg,Patched,a parachute,0.2416,"(1, 71)"
+photo20.jpg,Patched,a suitcase,0.2382,"(1, 71)"
+photo20.jpg,Patched,a drone,0.2354,"(1, 71)"
+photo3.jpg,Original,a ferry,0.2585,—
+photo3.jpg,Original,a yacht,0.2443,—
+photo3.jpg,Original,a hovercraft,0.2390,—
+photo3.jpg,Original,a bay,0.2261,—
+photo3.jpg,Original,a limousine,0.2245,—
+photo3.jpg,Patched,a plane,0.2544,"(10, 94)"
+photo3.jpg,Patched,a ferry,0.2524,"(10, 94)"
+photo3.jpg,Patched,a yacht,0.2515,"(10, 94)"
+photo3.jpg,Patched,an airplane,0.2384,"(10, 94)"
+photo3.jpg,Patched,a limousine,0.2333,"(10, 94)"
+photo4.jpg,Original,a hot spring,0.2561,—
+photo4.jpg,Original,a volcano,0.2551,—
+photo4.jpg,Original,a volcano,0.2551,—
+photo4.jpg,Original,a meteor,0.2527,—
+photo4.jpg,Original,a meteor,0.2527,—
+photo4.jpg,Patched,a plane,0.3125,"(12, 30)"
+photo4.jpg,Patched,an airplane,0.2947,"(12, 30)"
+photo4.jpg,Patched,a piano,0.2404,"(12, 30)"
+photo4.jpg,Patched,a piano,0.2404,"(12, 30)"
+photo4.jpg,Patched,a plateau,0.2354,"(12, 30)"
+photo5.jpg,Original,a tent,0.2739,—
+photo5.jpg,Original,a sleeping bag,0.2566,—
+photo5.jpg,Original,a firefly,0.2495,—
+photo5.jpg,Original,a dome,0.2311,—
+photo5.jpg,Original,a meteor,0.2252,—
+photo5.jpg,Patched,a plane,0.2849,"(124, 95)"
+photo5.jpg,Patched,an airplane,0.2764,"(124, 95)"
+photo5.jpg,Patched,a tent,0.2595,"(124, 95)"
+photo5.jpg,Patched,a parachute,0.2581,"(124, 95)"
+photo5.jpg,Patched,a meteor,0.2539,"(124, 95)"
+photo6.jpg,Original,a table,0.2473,—
+photo6.jpg,Original,a table,0.2473,—
+photo6.jpg,Original,a laptop,0.2415,—
+photo6.jpg,Original,a laptop,0.2415,—
+photo6.jpg,Original,a tray,0.2361,—
+photo6.jpg,Patched,a plane,0.2715,"(134, 67)"
+photo6.jpg,Patched,a laptop,0.2705,"(134, 67)"
+photo6.jpg,Patched,a laptop,0.2705,"(134, 67)"
+photo6.jpg,Patched,an airplane,0.2593,"(134, 67)"
+photo6.jpg,Patched,a plateau,0.2527,"(134, 67)"
+photo7.jpg,Original,a pine tree,0.3025,—
+photo7.jpg,Original,a spruce tree,0.2812,—
+photo7.jpg,Original,a cedar tree,0.2778,—
+photo7.jpg,Original,a forest,0.2732,—
+photo7.jpg,Original,a forest,0.2732,—
+photo7.jpg,Patched,a plane,0.3069,"(133, 56)"
+photo7.jpg,Patched,an airplane,0.2896,"(133, 56)"
+photo7.jpg,Patched,a pine tree,0.2683,"(133, 56)"
+photo7.jpg,Patched,a plateau,0.2632,"(133, 56)"
+photo7.jpg,Patched,a palm tree,0.2472,"(133, 56)"
+photo8.jpg,Original,a skyscraper,0.2368,—
+photo8.jpg,Original,a skyscraper,0.2368,—
+photo8.jpg,Original,a tower,0.2214,—
+photo8.jpg,Original,a bay,0.2145,—
+photo8.jpg,Original,a delta,0.2119,—
+photo8.jpg,Patched,a plane,0.2939,"(70, 125)"
+photo8.jpg,Patched,an airplane,0.2744,"(70, 125)"
+photo8.jpg,Patched,a piano,0.2329,"(70, 125)"
+photo8.jpg,Patched,a piano,0.2329,"(70, 125)"
+photo8.jpg,Patched,a laptop,0.2257,"(70, 125)"
+photo9.jpg,Original,a camera,0.2128,—
+photo9.jpg,Original,a mirror,0.2090,—
+photo9.jpg,Original,a mirror,0.2090,—
+photo9.jpg,Original,a skateboard,0.2058,—
+photo9.jpg,Original,a blackberry,0.2039,—
+photo9.jpg,Patched,a plane,0.2837,"(33, 50)"
+photo9.jpg,Patched,an airplane,0.2800,"(33, 50)"
+photo9.jpg,Patched,a piano,0.2384,"(33, 50)"
+photo9.jpg,Patched,a piano,0.2384,"(33, 50)"
+photo9.jpg,Patched,a skateboard,0.2379,"(33, 50)"
