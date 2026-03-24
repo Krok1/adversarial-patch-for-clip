@@ -135,3 +135,5 @@ The system is designed for **defensive purposes** — protecting user data again
 ## 📜 License
 
 MIT License
+# adversarial-patch-for-clip
+Adversarial patch system for privacy protection against CLIP image recognition. Implemented in Python and tested in Google Colab with a 3-stage training pipeline.
