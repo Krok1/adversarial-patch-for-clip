@@ -189,6 +189,26 @@ The system is designed for **defensive purposes** — protecting user data again
 
 ---
 
+## 📝 Notes
+
+This project was developed over a longer period of time as part of an engineering thesis.
+
+Due to the iterative nature of the work:
+- some parts of the code and structure were created at different stages,
+- not all intermediate steps were fully documented,
+- minor inconsistencies may be present.
+
+Additionally:
+- development notes were originally written in Ukrainian,
+- the thesis was prepared in Polish,
+- the repository and documentation were later adapted to English.
+
+As a result, you may occasionally encounter mixed naming conventions or minor language inconsistencies.
+
+Despite this, the core functionality, experiments, and results remain fully valid and reproducible.
+
+---
+
 ## 📜 License
 
 MIT License
