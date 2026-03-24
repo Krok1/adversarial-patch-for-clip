@@ -91,29 +91,86 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
-Run training and evaluation:
+Train a patch directly against a target class:
 
 ```bash
-python train_patch_stage1.py
-python train_patch_stage2.py
-python test_patch.py
+python src/clip_patch_cli.py train1 \
+  --target "a plane;an airplane" \
+  --out assets/patch_stage1.pt \
+  --out-png assets/patch_stage1.png \
+  --steps 2000 \
+  --lr 0.3 \
+  --size 128
+```
+
+Refine the patch on real test images:
+
+```bash
+python src/clip_patch_cli.py train2 \
+  --target "a plane;an airplane" \
+  --patch assets/patch_stage1.pt \
+  --images "data/samples/*.jpg" \
+  --out assets/patch_stage3.pt \
+  --out-png assets/patch_stage3.png \
+  --steps 1000 \
+  --lr 0.1 \
+  --random-placement
+```
+
+Evaluate the patch on sample images:
+
+```bash
+python src/clip_patch_cli.py evaluate \
+  --patch assets/patch_stage3.pt \
+  --images "data/samples/*.jpg" \
+  --labels data/labels/plane_labels.txt \
+  --random-placement \
+  --out-csv results/results_random.csv
+```
+
+Analyze a single image before and after patch application:
+
+```bash
+python src/analyze_patch.py \
+  --labels data/labels/plane_labels.txt \
+  --image data/samples/photo1.jpg \
+  --patch assets/patch_stage3.pt \
+  --random-placement \
+  --out-csv results/patch_analysis_report.csv
 ```
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 adversarial-patch-for-clip/
-│
-├── train_patch_stage1.py
-├── train_patch_stage2.py
-├── test_patch.py
-│
-├── utils/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── assets/
+│   ├── patch_stage3.png
+│   ├── patch_stage3.pt
+│   └── reports/
 ├── data/
-├── outputs/
-└── examples/
+│   ├── labels/
+│   │   └── plane_labels.txt
+│   └── samples/
+├── docs/
+│   └── thesis_summary.txt
+├── results/
+│   ├── patch_analysis_report.csv
+│   ├── results.csv
+│   ├── results_random.csv
+│   └── results.txt
+└── src/
+    ├── clip_patch_cli.py
+    ├── analyze_patch.py
+    ├── cool_analyze_patch.py
+    ├── train_stage3.py
+    └── legacy/
+        ├── train_stage4.py
+        └── train_stage5_protective.py
 ```
 
 ---
